@@ -14,27 +14,16 @@ public class AsyncCallService {
         this.asyncService = asyncService;
     }
 
-    public void callAsyncMethod() {
-        log.info("async method start");
+    public void 외부_async_메소드_호출() {
         asyncService.asyncMethod();
-        log.info("async method called");
     }
 
-    public void callInnerAsyncMethod() {
-        log.info("async method start");
+    public void 내부_async_메소드_호출() {
         innerAsyncMethod();
-        log.info("inner async method called");
     }
 
     @Async
     public void innerAsyncMethod() {
-        for (int i = 0; i < 5; i++) {
-            log.info("processing async method: {}", i);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        }
+        throw new IllegalArgumentException("async 동작 실패");
     }
 }

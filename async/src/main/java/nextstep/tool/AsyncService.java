@@ -10,13 +10,6 @@ public class AsyncService {
 
     @Async
     public void asyncMethod() {
-        for (int i = 0; i < 5; i++) {
-            log.info("processing async method: {}", i);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        }
+        throw new IllegalArgumentException("async 동작 실패");
     }
 }
