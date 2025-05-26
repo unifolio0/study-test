@@ -26,6 +26,9 @@ subprojects {
     }
 
     dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
     }
 
@@ -33,36 +36,6 @@ subprojects {
     jar.enabled = true
 
     test {
-        useJUnitPlatform {
-            excludeTags('develop', 'restdocs')
-        }
-    }
-
-    tasks.register('unitTest', Test) {
-        group = 'verification'
-        useJUnitPlatform {
-            excludeTags('develop', 'context', 'restdocs')
-        }
-    }
-
-    tasks.register('contextTest', Test) {
-        group = 'verification'
-        useJUnitPlatform {
-            includeTags('context')
-        }
-    }
-
-    tasks.register('restDocsTest', Test) {
-        group = 'verification'
-        useJUnitPlatform {
-            includeTags('restdocs')
-        }
-    }
-
-    tasks.register('developTest', Test) {
-        group = 'verification'
-        useJUnitPlatform {
-            includeTags('develop')
-        }
+        useJUnitPlatform()
     }
 }
