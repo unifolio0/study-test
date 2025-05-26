@@ -1,4 +1,4 @@
-package nextstep.tool;
+package nextstep.service;
 
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

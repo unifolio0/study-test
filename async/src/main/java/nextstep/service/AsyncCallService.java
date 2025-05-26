@@ -1,21 +1,18 @@
-package nextstep.tool;
+package nextstep.service;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.RequiredArgsConstructor;
+import nextstep.tool.AsyncProvider;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-@Slf4j
 @Service
+@RequiredArgsConstructor
 public class AsyncCallService {
 
-    private final AsyncService asyncService;
-
-    public AsyncCallService(AsyncService asyncService) {
-        this.asyncService = asyncService;
-    }
+    private final AsyncProvider asyncProvider;
 
     public void 외부_async_메소드_호출() {
-        asyncService.asyncMethod();
+        asyncProvider.async_메소드_예외_발생();
     }
 
     public void 내부_async_메소드_호출() {
