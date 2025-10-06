@@ -9,4 +9,5 @@ rootProject.name = 'study-test'
 include 'async'
 include 'transactional'
 include 'dirtychecking'
+include 'aop-proxy'
 
