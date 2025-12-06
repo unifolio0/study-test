@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mysql-test:
+    image: mysql:8.0
+    container_name: jpa-relationship-mysql
+    environment:
+      MYSQL_DATABASE: jpa_relationship
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "13311:3306"

@@ -10,4 +10,4 @@ include 'async'
 include 'transactional'
 include 'dirtychecking'
 include 'aop-proxy'
-
+include 'jpa-relationship'
