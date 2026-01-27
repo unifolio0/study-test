@@ -32,7 +32,7 @@ class ReservationTest {
     }
 
     @Test
-    void test() {
+    void 소프트_참조_연관관계_테스트() {
         LocalDate now = LocalDate.now();
         Long id = transactionTemplate.execute(status -> {
             AvailableDate availableDate = availableDateRepository.save(new AvailableDate(now));

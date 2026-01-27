@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: auto-vs-uuid
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:13312/auto-vs-uuid
+    username: root
+    password: root
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create
